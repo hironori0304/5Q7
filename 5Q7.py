@@ -45,6 +45,9 @@ def filter_and_sort_quiz_data(df, selected_years, selected_categories):
     return quiz_data
 
 def generate_certificate_image(details, score, total_questions):
+    # 日本語対応のための設定
+    japanize_matplotlib.japanize()
+
     # 証明書のサイズ設定
     fig, ax = plt.subplots(figsize=(10, 8))  # 幅10インチ、高さ8インチ
     ax.axis('off')
